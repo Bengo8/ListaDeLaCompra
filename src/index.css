@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,24 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.volver-div {
+  /* margin: 20px; */
+  box-shadow: 3px 6px 20px black;
+
+  width: 70px;
+  margin: 30px auto;
+  /* overflow: auto; */
+  /* min-height: 300px; */
+  /* padding: 30px; */
+  /* border-radius: 5px; */
+}
+
+.btnVolver {
+  width: 70px;
+  height: 40px;
 }
 
 .container {
@@ -39,7 +56,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   font-size: 18px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .btn-order:focus {
@@ -78,28 +95,28 @@ body {
 }
 
 .advice {
-  color:rgb(182, 18, 18);
-  padding-bottom: 5px!important;
-  padding: 25px;  
+  color: rgb(182, 18, 18);
+  padding-bottom: 5px !important;
+  padding: 25px;
   font-size: 15px;
 }
 
 .caja-cat {
-  width: 440px!important;
-  height: 37px!important;
+  width: 440px !important;
+  height: 37px !important;
 }
 
 .select-cat {
-  width: 440px!important;
+  width: 440px !important;
 }
 
 .caja {
-  margin:20px auto 40px auto;	
-  border:1px solid #d9d9d9;
-  height:30px;
+  margin: 20px auto 40px auto;
+  border: 1px solid #d9d9d9;
+  height: 30px;
   overflow: hidden;
   width: 230px;
-  position:relative;
+  position: relative;
   margin-bottom: 0px;
 }
 
@@ -112,19 +129,21 @@ select {
   width: 250px;
 }
 
-select:focus{ outline: none;}
+select:focus {
+  outline: none;
+}
 
-.caja::after{
-  content:"\025be";
-  display:table-cell;
-  padding-top:7px;
-  text-align:center;
-  width:30px;
-  height:30px;
-  background-color:#d9d9d9;
-  position:absolute;
-  top:0;
-  right:0px;	
+.caja::after {
+  content: "\025be";
+  display: table-cell;
+  padding-top: 7px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  background-color: #d9d9d9;
+  position: absolute;
+  top: 0;
+  right: 0px;
   pointer-events: none;
 }
 

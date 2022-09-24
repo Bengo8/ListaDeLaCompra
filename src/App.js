@@ -7,7 +7,7 @@ import ProductsService from "./services/ProductsService";
 
 const productsSrvc = new ProductsService();
 function App() {
-  
+
   const [showAddProduct, setShowAddProduct] = useState(false);
   const [products, setProducts] = useState(productsSrvc.getProducts())
 
@@ -16,7 +16,7 @@ function App() {
     const newProd = productsSrvc.addNewProduct(prod)
     setProducts([...newProd]);
   };
-  
+
   // Delete Product
   const deleteProduct = (id) => {
     const newProducstList = productsSrvc.deleteProduct(id)
@@ -39,19 +39,30 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Header onAdd={() => setShowAddProduct(!showAddProduct)} active={showAddProduct}></Header>
-      {showAddProduct && <AddProduct onAdd={addProduct}></AddProduct>}
-      {products.length > 0 ? (
-        <Products products={products}
-        onDelete={deleteProduct}
-        onToggle={toggleBought}
-        onOrder={orderProducts}></Products>
+    <>
+      {/* <div className="volver-div">
+        <button className="btn-success btnVolver">Volver</button>
+      </div> */}
+      {/* <nav className="navbar navbar-dark bg-dark"> */}
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a className="navbar-brand">Navbar</a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+      <div className="container">
+        <Header onAdd={() => setShowAddProduct(!showAddProduct)} active={showAddProduct}></Header>
+        {showAddProduct && <AddProduct onAdd={addProduct}></AddProduct>}
+        {products.length > 0 ? (
+          <Products products={products}
+            onDelete={deleteProduct}
+            onToggle={toggleBought}
+            onOrder={orderProducts}></Products>
         ) : (
           'No hay poductos para mostrar'
         )}
-      
-    </div>
+      </div>
+    </>
   );
 }
 
